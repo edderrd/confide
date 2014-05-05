@@ -473,4 +473,28 @@ class ConfideUser extends Ardent implements UserInterface {
             return false;
         }
     }
+
+    /**
+     * @return mixed
+     */
+    public function getRememberToken()
+    {
+        return $this->remember_token;
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setRememberToken($value)
+    {
+        $this->remember_token = $value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRememberTokenName()
+    {
+        return 'remember_token';
+    }
 }
